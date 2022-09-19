@@ -19,8 +19,9 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #00b8ae;
   --color-secondary: #161718;
+  --color-hover: #03d4ca;
 }
 
 /* Smooth scroll behavior */
@@ -43,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #32cf93;
+  color: var(--color-hover);
   text-decoration: none;
 }
 
@@ -134,7 +135,7 @@ h6 {
 }
 
 .page-header .cta-btn:hover {
-  background: #2cbc85;
+  background: var(--color-hover);
 }
 
 /*--------------------------------------------------------------
@@ -161,7 +162,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background: rgba(39, 167, 118, 0.8);
+  background: var(--color-hover);
   color: #fff;
 }
 
@@ -181,6 +182,36 @@ h6 {
   width: 100%;
   height: 100vh;
   z-index: 99999;
+}
+
+.transition-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 200px;
+  animation: fade 2.5s infinite;
+
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
 }
 
 #preloader:before,
@@ -1273,7 +1304,8 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: #00ffff;
+  color: black;
 }
 
 @media (max-width: 768px) {
